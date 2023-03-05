@@ -38,19 +38,7 @@ REDIS_HOST=<YOUR_HOST> REDIS_PORT=<YOUR_PORT> make dev
 | Variable          | Type     | Default value | Possible Values |
 |-------------------|----------|---------------|-----------------|
 | PORT              | Int      | 8000          |                 |
-|-------------------|----------|---------------|-----------------|
 | HEALTH_CHECK_PORT | Int      | 8001          |                 |
-|-------------------|----------|---------------|-----------------|
-| DEBUG_LEVEL       | String   | INFO          | - PANIC         |
-|                   |          |               | - FATAL         |
-|                   |          |               | - ERROR         |
-|                   |          |               | - WARN          |
-|                   |          |               | - NOTICE        |
-|                   |          |               | - INFO          |
-|                   |          |               | - DEBUG         |
-|                   |          |               | - TRACE         |
-|-------------------|----------|---------------|-----------------|
+| DEBUG_LEVEL       | String   | INFO          | PANIC, FATAL, ERROR, WARN, NOTICE, INFO, DEBUG, TRACE |
 | REDIS_HOST        | String   | localhost     |                 |
-|-------------------|----------|---------------|-----------------|
 | REDIS_PORT        | Int      | 6379          |                 |
-|-------------------|----------|---------------|-----------------|
