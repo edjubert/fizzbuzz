@@ -24,5 +24,7 @@ func Base(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case "GET":
 		home.Base(ctx, w, r)
+	default:
+		utils.NotImplemented(ctx, w, r)
 	}
 }

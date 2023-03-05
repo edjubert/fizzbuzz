@@ -7,6 +7,7 @@ import (
 	"github.com/edjubert/leboncoin/constants"
 	"github.com/edjubert/leboncoin/redis"
 	"github.com/edjubert/leboncoin/services/statistics"
+	"github.com/edjubert/leboncoin/utils"
 )
 
 func Statistics(w http.ResponseWriter, r *http.Request, redis redis.Cache) {
@@ -19,5 +20,7 @@ func Statistics(w http.ResponseWriter, r *http.Request, redis redis.Cache) {
 	switch r.Method {
 	case "GET":
 		statistics.Statistics(ctx, w, r, redis)
+	default:
+		utils.NotImplemented(ctx, w, r)
 	}
 }

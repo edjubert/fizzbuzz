@@ -31,10 +31,10 @@ make docker
 ### Local
 Assuming you have an already running Redis database, you can run:
 ```bash
-REDIS_HOST=<YOUR_HOST> REDIS_PORT=<YOUR_PORT> make dev
+make dev
 ```
 
-### Available Environment Variables
+## Available Environment Variables
 | Variable          | Type     | Default value | Possible Values |
 |-------------------|----------|---------------|-----------------|
 | PORT              | Int      | 8000          |                 |
@@ -42,3 +42,4 @@ REDIS_HOST=<YOUR_HOST> REDIS_PORT=<YOUR_PORT> make dev
 | DEBUG_LEVEL       | String   | INFO          | PANIC, FATAL, ERROR, WARN, NOTICE, INFO, DEBUG, TRACE |
 | REDIS_HOST        | String   | localhost     |                 |
 | REDIS_PORT        | Int      | 6379          |                 |
+

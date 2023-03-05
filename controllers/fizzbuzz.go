@@ -33,5 +33,7 @@ func FizzBuzz(w http.ResponseWriter, r *http.Request, redis redis.Cache) {
 	switch r.Method {
 	case "POST":
 		FizzBuzzPost(w, r, redis, ctx)
+	default:
+		utils.NotImplemented(ctx, w, r)
 	}
 }

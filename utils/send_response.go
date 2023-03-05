@@ -3,6 +3,7 @@ package utils
 import (
 	"context"
 	"errors"
+	"fmt"
 	"net/http"
 
 	"github.com/edjubert/leboncoin/constants"
@@ -15,6 +16,11 @@ func Ok(ctx context.Context, w http.ResponseWriter, msg string) {
 
 func InternalServerError(ctx context.Context, w http.ResponseWriter, err error) {
 	Response(ctx, w, "", http.StatusInternalServerError, err)
+}
+
+func NotImplemented(ctx context.Context, w http.ResponseWriter, r *http.Request) {
+	msg := fmt.Sprintf("[%s] %s -> Not implemented", r.URL.Path, r.Method)
+	Response(ctx, w, msg, http.StatusNotImplemented, errors.New(msg))
 }
 
 func NotFound(ctx context.Context, w http.ResponseWriter, url string) {
