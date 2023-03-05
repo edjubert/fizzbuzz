@@ -1,11 +1,12 @@
 package home
 
 import (
+	"context"
 	"net/http"
 
 	"github.com/edjubert/leboncoin/utils"
 )
 
-func Base(w http.ResponseWriter, r *http.Request) {
-	utils.SendResponse(w, "ok", "/", http.StatusOK, nil)
+func Base(ctx context.Context, w http.ResponseWriter, r *http.Request) {
+	utils.Ok(ctx, w, "ok")
 }

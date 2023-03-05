@@ -8,4 +8,5 @@ const (
 	HOME_BASE  = "/"
 	STATISTICS = "/statistics"
 	FIZZBUZZ   = "/fizzbuzz"
+	CTX_ADDR   = "addr"
 )
