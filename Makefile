@@ -29,9 +29,13 @@ clean:
 	@go clean
 	@rm -rf ${BIN_FOLDER}
 
-docker:
+docker_build:
 	@echo "Building Dockerfile"
 	@docker build -t edjubert/leboncoin .
+
+docker: docker_build
+	@echo "Starting docker compose"
+	@docker compose up -d
 
 all: build start
 
