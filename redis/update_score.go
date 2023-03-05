@@ -11,7 +11,7 @@ import (
 func (r *redisStruct) UpdateScore(ctx context.Context, params types.Params) error {
 	member := getRedisMemberKey(params)
 
-	score, err := r.client.ZScore(ctx, REDIS_ZSET, member).Result()
+	score, _ := r.client.ZScore(ctx, REDIS_ZSET, member).Result()
 	if err := r.client.ZAdd(ctx, REDIS_ZSET, redis.Z{
 		Score:  score + 1,
 		Member: member,
