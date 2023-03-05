@@ -19,6 +19,7 @@ type Cache interface {
 	UpdateScore(ctx context.Context, params types.Params) error
 	SaveParamsAndMsg(ctx context.Context, params types.Params, msg string) error
 	GetMsgFromParams(ctx context.Context, params types.Params) (string, error)
+	GetMostUsedParams(ctx context.Context) (types.Params, float64, error)
 }
 
 const REDIS_ZSET = "ZSet"
