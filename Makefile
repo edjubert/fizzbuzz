@@ -37,6 +37,10 @@ docker: docker_build
 	@echo "Starting docker compose"
 	@docker compose up -d
 
+tests:
+	@echo "Starting tests"
+	@DEBUG_LEVEL=FATAL go test ./*.go
+
 all: build start
 
 .PHONY: build clean run dev install

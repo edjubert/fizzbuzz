@@ -43,3 +43,7 @@ make dev
 | REDIS_HOST        | String   | localhost     |                 |
 | REDIS_PORT        | Int      | 6379          |                 |
 
+## Running tests
+```bash
+make test
+```
