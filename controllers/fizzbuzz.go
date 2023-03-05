@@ -9,11 +9,9 @@ import (
 	"github.com/edjubert/leboncoin/redis"
 	"github.com/edjubert/leboncoin/services/fizzbuzz"
 	"github.com/edjubert/leboncoin/utils"
-	"github.com/gookit/slog"
 )
 
 func FizzBuzzPost(w http.ResponseWriter, r *http.Request, redis redis.Cache, ctx context.Context) {
-	slog.Debug("1")
 	body, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		utils.InternalServerError(ctx, w, err)

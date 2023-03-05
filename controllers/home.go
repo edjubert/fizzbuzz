@@ -6,6 +6,7 @@ import (
 
 	"github.com/edjubert/leboncoin/constants"
 	"github.com/edjubert/leboncoin/services/home"
+	"github.com/edjubert/leboncoin/utils"
 )
 
 func Base(w http.ResponseWriter, r *http.Request) {
@@ -16,7 +17,7 @@ func Base(w http.ResponseWriter, r *http.Request) {
 	)
 
 	if r.URL.Path != constants.HOME_BASE {
-		NotFound(w, r)
+		utils.NotFound(ctx, w, r.URL.Path)
 		return
 	}
 

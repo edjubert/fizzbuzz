@@ -2,6 +2,7 @@ package utils
 
 import (
 	"context"
+	"errors"
 	"net/http"
 
 	"github.com/edjubert/leboncoin/constants"
@@ -16,8 +17,13 @@ func InternalServerError(ctx context.Context, w http.ResponseWriter, err error) 
 	Response(ctx, w, "", http.StatusInternalServerError, err)
 }
 
-func NotFound(ctx context.Context, w http.ResponseWriter) {
-	Response(ctx, w, "page not found", http.StatusNotFound, nil)
+func NotFound(ctx context.Context, w http.ResponseWriter, url string) {
+	ctx = context.WithValue(
+		ctx,
+		constants.CTX_ADDR,
+		url,
+	)
+	Response(ctx, w, "Page not found", http.StatusNotFound, errors.New("Not found"))
 }
 
 func Response(ctx context.Context, w http.ResponseWriter, msg string, status int, err error) {
