@@ -13,6 +13,7 @@ func main() {
 	redisHost := utils.GetEnvWithDefault("REDIS_HOST", "localhost")
 	redisPort := utils.GetEnvWithDefault("REDIS_PORT", "6379")
 	redisCache := r.GetRedisClient(fmt.Sprintf("%s:%s", redisHost, redisPort), false)
+	defer redisCache.Close()
 
 	server(redisCache)
 }
