@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/edjubert/leboncoin/constants"
+	"github.com/edjubert/fizzbuzz/constants"
 	"github.com/gookit/slog"
 )
 

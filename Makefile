@@ -31,7 +31,7 @@ clean:
 
 docker_build:
 	@echo "Building Dockerfile"
-	@docker build -t edjubert/leboncoin .
+	@docker build -t edjubert/fizzbuzz .
 
 docker: docker_build
 	@echo "Starting docker compose"

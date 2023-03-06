@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/edjubert/leboncoin/types"
+	"github.com/edjubert/fizzbuzz/types"
 	"github.com/gookit/slog"
 )
 

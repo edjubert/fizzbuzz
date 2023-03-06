@@ -3,8 +3,8 @@ package fizzbuzz
 import (
 	"context"
 
-	"github.com/edjubert/leboncoin/redis"
-	"github.com/edjubert/leboncoin/types"
+	"github.com/edjubert/fizzbuzz/redis"
+	"github.com/edjubert/fizzbuzz/types"
 )
 
 func GetFizzBuzz(ctx context.Context, params types.Params, redis redis.Cache) string {

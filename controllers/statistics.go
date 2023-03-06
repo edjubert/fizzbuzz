@@ -4,10 +4,10 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/edjubert/leboncoin/constants"
-	"github.com/edjubert/leboncoin/redis"
-	"github.com/edjubert/leboncoin/services/statistics"
-	"github.com/edjubert/leboncoin/utils"
+	"github.com/edjubert/fizzbuzz/constants"
+	"github.com/edjubert/fizzbuzz/redis"
+	"github.com/edjubert/fizzbuzz/services/statistics"
+	"github.com/edjubert/fizzbuzz/utils"
 )
 
 func Statistics(w http.ResponseWriter, r *http.Request, redis redis.Cache) {

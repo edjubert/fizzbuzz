@@ -1,4 +1,4 @@
-module github.com/edjubert/leboncoin
+module github.com/edjubert/fizzbuzz
 
 go 1.20
 

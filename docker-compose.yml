@@ -2,8 +2,8 @@ version: "3.8"
 
 services:
   go:
-    container_name: leboncoin_go_server
-    image: edjubert/leboncoin
+    container_name: fizzbuzz_go_server
+    image: edjubert/fizzbuzz
     networks:
       fizzbuzz:
     ports:
@@ -15,7 +15,7 @@ services:
       REDIS_PORT: 6379
 
   redis:
-    container_name: leboncoin_redis_server
+    container_name: fizzbuzz_redis_server
     image: redis
     ports:
       - "6379:6379"

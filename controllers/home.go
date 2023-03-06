@@ -4,9 +4,9 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/edjubert/leboncoin/constants"
-	"github.com/edjubert/leboncoin/services/home"
-	"github.com/edjubert/leboncoin/utils"
+	"github.com/edjubert/fizzbuzz/constants"
+	"github.com/edjubert/fizzbuzz/services/home"
+	"github.com/edjubert/fizzbuzz/utils"
 )
 
 func Base(w http.ResponseWriter, r *http.Request) {

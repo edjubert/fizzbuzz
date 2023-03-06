@@ -3,7 +3,7 @@ package redis
 import (
 	"context"
 
-	"github.com/edjubert/leboncoin/types"
+	"github.com/edjubert/fizzbuzz/types"
 	"github.com/redis/go-redis/v9"
 )
 

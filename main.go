@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	r "github.com/edjubert/leboncoin/redis"
-	"github.com/edjubert/leboncoin/utils"
+	r "github.com/edjubert/fizzbuzz/redis"
+	"github.com/edjubert/fizzbuzz/utils"
 )
 
 func main() {

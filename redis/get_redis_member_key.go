@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/url"
 
-	"github.com/edjubert/leboncoin/types"
+	"github.com/edjubert/fizzbuzz/types"
 )
 
 func getRedisMemberKey(params types.Params) string {

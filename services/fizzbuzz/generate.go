@@ -3,7 +3,7 @@ package fizzbuzz
 import (
 	"strconv"
 
-	"github.com/edjubert/leboncoin/types"
+	"github.com/edjubert/fizzbuzz/types"
 )
 
 func (d *FizzBuzz) Generate(params types.Params) *FizzBuzz {

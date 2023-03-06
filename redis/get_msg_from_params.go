@@ -3,7 +3,7 @@ package redis
 import (
 	"context"
 
-	"github.com/edjubert/leboncoin/types"
+	"github.com/edjubert/fizzbuzz/types"
 )
 
 func (r *redisStruct) GetMsgFromParams(ctx context.Context, params types.Params) (string, error) {
