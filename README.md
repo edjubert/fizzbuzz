@@ -43,6 +43,57 @@ make dev
 | REDIS_HOST        | String   | localhost     |                 |
 | REDIS_PORT        | Int      | 6379          |                 |
 
+##  Endpoints
+### Fizzbuzz
+To get the generated Fizzbuzz, you can call the `/fizzbuzz` POST endpoint.
+This endpoint returns the generated string
+```bash
+curl http://localhost:8080/fizzbuzz -X POST -d '{"int1":3,"int2":5,"limit":100,"str1":"fizz","str2":"buzz"}'
+```
+
+Accepted parameters:
+```js
+{
+  int1:  number,
+  int2:  number,
+  limit: number,
+  str1:  string,
+  str2:  string,
+}
+```
+
+Calling this endpoint with any other method than *POST* will return a `501 NOT IMPLEMENTED` response.
+
+### Statistics
+The `/statistics` GET endpoint returns the parameters corresponding to the most used request and the number of hits.
+```bash
+curl http://localhost:8080/statistics
+```
+The result is formatted in JSON as:
+```json
+{
+  "params": {
+    "int1": 3,
+    "int2": 5,
+    "limit": 1000,
+    "str1": "fizz",
+    "str2": "buzz",
+  },
+  "score": 10
+}
+```
+Calling this endpoint with any other method than *GET* will return a `501 NOT_IMPLEMENTED` response.
+
+### Health Check
+There is an health check server running on a different port (default to `8081`) on the root (`/`) endpoint.
+This endpoint returns `ok`
+
+```bash
+curl http://localhost:8081/ # ok
+```
+
+Any other path on that server will result with a `404 NOT_FOUND`.
+
 ## Running tests
 ```bash
 make test
