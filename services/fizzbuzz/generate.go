@@ -29,7 +29,7 @@ func (d *FizzBuzz) Generate(params types.Params) *FizzBuzz {
 		if onlyStr1 {
 			str = str1
 		} else if onlyStr2 {
-			str = str1
+			str = str2
 		} else if both {
 			str = str1 + str2
 		}
